@@ -16,4 +16,14 @@ class FirstView(View):
 
 class SecondView(View):
     def get(self, request, param):
-        return JsonResponse({"param": param})
+        query = request.GET.get("query", "no query")
+        return JsonResponse({"param": param, "query": query})
+    def post(self, request, param):
+        query = request.GET.get("query", "no query")
+        return JsonResponse({"param": param, "query": query})
+    def put(self, request, param):
+        query = request.GET.get("query", "no query")
+        return JsonResponse({"param": param, "query": query})
+    def delete(self, request, param):
+        query = request.GET.get("query", "no query")
+        return JsonResponse({"param": param, "query": query})
