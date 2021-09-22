@@ -13,3 +13,7 @@ class FirstView(View):
         return JsonResponse({"hello": "world", "method": request.method})
     def delete(self, request):
         return JsonResponse({"hello": "world", "method": request.method})
+
+class SecondView(View):
+    def get(self, request, param):
+        return JsonResponse({"param": param})
