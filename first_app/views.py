@@ -6,10 +6,10 @@ from django.views import View
 
 class FirstView(View):
     def get(self, request):
-        return JsonResponse({"hello", "world", "method": request.method})
+        return JsonResponse({"hello": "world", "method": request.method})
     def post(self, request):
-        return JsonResponse({"hello", "world", "method": request.method})
+        return JsonResponse({"hello": "world", "method": request.method})
     def put(self, request):
-        return JsonResponse({"hello", "world", "method": request.method})
+        return JsonResponse({"hello": "world", "method": request.method})
     def delete(self, request):
-        return JsonResponse({"hello", "world", "method": request.method})
+        return JsonResponse({"hello": "world", "method": request.method})
